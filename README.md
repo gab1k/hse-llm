@@ -1,4 +1,4 @@
-# TL;DR по‑русски: управляемая абстрактивная суммаризация текста (short/medium/long) + тезисы
+# TL;DR по‑русски: управляемая абстрактивная суммаризация текста (short/medium/long)
 
 ## Презентация к промежуточной защите проекта:
 - https://docs.google.com/presentation/d/1mfpCenbjwq5oISoyHzxNOnUpZ6it8dxF
