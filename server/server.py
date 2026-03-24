@@ -87,10 +87,11 @@ class SummarizationModel:
             from peft import PeftModel
             self.tokenizer = AutoTokenizer.from_pretrained(base_model_path, trust_remote_code=True)
             base = AutoModelForCausalLM.from_pretrained(
-                base_model_path, torch_dtype=torch.float16, device_map="auto", trust_remote_code=True
+                base_model_path, torch_dtype=torch.float16, trust_remote_code=True
             )
             self.model = PeftModel.from_pretrained(base, model_path)
             self.model = self.model.merge_and_unload()
+            self.model = self.model.to(self.device)
             logger.info("LoRA адаптер смержен с базовой моделью")
         else:
             raise ValueError(f"Неизвестный model_type: {model_type}")
